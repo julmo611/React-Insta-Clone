@@ -1,12 +1,10 @@
 import React from 'react';
-
+import './comments.css';
 
 const Likes = props => {
-    console.log(props.likes);
     return (
         <>
-         <div> <i className="far fa-heart" /> <i className="far fa-comment"  /> </div>
-          <div>{props.likes} Likes </div>
+         <div className="like-icons"> <i className="far fa-heart" /> <i className="far fa-comment"  /> </div>
         </>
     )
 }

@@ -1,17 +1,14 @@
 import React from 'react';
+import './postcontainer.css';
 
 const PostHeader = props => {
     return (
-        <div>
+        <div className="profile-img">
             <img 
             src={props.thumbnailUrl} 
             alt={props.username} />
             {props.username}
-            <div>
-                
-            </div>
-
-
+           
         </div>
     )
 }
