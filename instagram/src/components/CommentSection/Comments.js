@@ -4,8 +4,8 @@ const Comments = props => {
     return(
         <>
      
-        {props.comments.text}
-      {props.comments.username}
+        <p>{props.comments.text}</p>
+        <p>{props.comments.username}</p>
                     
         </>
     );

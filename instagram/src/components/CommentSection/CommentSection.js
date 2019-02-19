@@ -2,7 +2,7 @@ import React from 'react';
 
 import AddInput from './AddInput';
 import Comments from './Comments';
-import Likes from './Likes';
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class CommentSection extends React.Component {
     render() {
       return (
             <div>
-                <Likes />
-                {this.state.comments.map((comm ) => <Comments comments={comm} />)}
+              
+                <p>{this.state.comments.map((comm ) => <Comments comments={comm} />)}</p>
                 <AddInput />
             </div>  
         );

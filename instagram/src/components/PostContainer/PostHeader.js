@@ -5,7 +5,7 @@ const PostHeader = props => {
         <div>
             <img 
             src={props.thumbnailUrl} 
-            alt="Profile Image" />
+            alt={props.username} />
             {props.username}
             <div>
                 

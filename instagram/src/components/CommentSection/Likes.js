@@ -2,12 +2,11 @@ import React from 'react';
 
 
 const Likes = props => {
+    console.log(props.likes);
     return (
         <>
-         <p> <i className="far fa-heart" />
-          {props.likes} Likes
-          <i className="far fa-comment"  />
-          </p>
+         <div> <i className="far fa-heart" /> <i className="far fa-comment"  /> </div>
+          <div>{props.likes} Likes </div>
         </>
     )
 }
