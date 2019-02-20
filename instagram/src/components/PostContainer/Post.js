@@ -5,7 +5,6 @@ import './postcontainer.css';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from '../CommentSection/Likes';
-import AddInput from '../CommentSection/AddInput';
 
 const Post = props => {
   
@@ -24,7 +23,7 @@ const Post = props => {
           <div className="likes-font">{props.post.likes} Likes</div>
           <CommentSection comments={props.post.comments} />
           <div className="moment">{moment( props.post.timestamp, "'MMMM Do YYYY, h:mm:ss a").fromNow()}</div>
-          <AddInput />
+         
        </div>
       </div>
     );
