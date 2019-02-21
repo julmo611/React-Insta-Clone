@@ -40,7 +40,7 @@ class CommentSection extends React.Component {
 
       this.setState({
         comments: [...this.state.comments, newComment],
-        text: ''
+        comment: ''
       });
     }
    

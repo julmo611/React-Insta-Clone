@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
 const PostPage = props => {
+    console.log(props);
     return (
         <>
         <div className="App">
