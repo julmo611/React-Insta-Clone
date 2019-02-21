@@ -1,0 +1,33 @@
+.add-comment {
+    border-top: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+}
+
+.add-comment input {
+    border: none;
+    width: 535px;
+    padding: 10px 5px;
+}
+
+.fa-ellipsis-h {
+    font-size: 12px;
+}
+
+
+
+.like-count {
+    font-size: 14px;
+}
+
+.likes-font {
+    font-size: 14px;
+    font-weight: bold; 
+    color: #262626;
+}
+
+.moment {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5px;
+}
