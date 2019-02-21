@@ -6,7 +6,7 @@ import Login from './components/Authentication/Login'
 
 import dummyData from './dummy-data';
 
-const ToShow = authenticate(PostPage)(Login);
+const ToShow = authenticate(Login)(PostPage);
 
 class App extends Component {
   constructor() {
@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="center-form">
+        <div>
           <ToShow posts={this.state.posts}/>
           <h2>Username</h2>
           <input type="text"/><br/>

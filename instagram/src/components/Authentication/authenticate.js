@@ -2,12 +2,11 @@ import React from 'react';
 
 
 const authenticate = Login => PostPage => props => {
-    if (localStorage.getItem('user')) {
+    if (!localStorage.getItem('user')) {
         return <Login />
 
     }
-    
-    return <PostPage posts={props} />
+    return <PostPage posts={props.posts} />
     
 };
 
