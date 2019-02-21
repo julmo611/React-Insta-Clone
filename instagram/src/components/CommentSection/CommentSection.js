@@ -7,6 +7,7 @@ import Comments from './Comments';
 
 // Style
 
+
 const AddComment = styled.div`
   border-top: 1px solid #efefef;
   display: flex;
@@ -17,6 +18,11 @@ const AddComment = styled.div`
       width: 535px;
       padding: 10px 5px;
   }
+
+  & .fa-ellipsis-h {
+    font-size: 12px;
+  }
+
 `
 
 

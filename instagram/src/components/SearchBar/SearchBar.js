@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import './searchbar.css';
-
-import instaLogo from '../../img/instaLogo.png';
+import instaLogo from '../../img/instaLogo.JPG';
 import SearchInput from './SearchInput';
 
 
+// Style
 
 const Topbar =  styled.div `
     width: 100%;
@@ -29,6 +28,13 @@ const Barcontainer = styled.div`
         height: 29px;
         padding-left: 15px; 
         border-left: 1px solid #000;
+        margin-left: 20px;
+    }
+
+    & .fa-heart, .fa-compass, .fa-user {
+        font-size: 23px;
+        padding: 10px;
+        color: #262626;
     }
 `
 
@@ -60,10 +66,13 @@ const Searchinputclass = styled.span`
             outline: none;
         }
     }
+
+    & .fa-instagram {
+        font-size: 24px;
+        
+         
+    }
 `
-
-
-
 
 
 const SearchBar = props => {
@@ -74,10 +83,9 @@ const SearchBar = props => {
                 <img src={instaLogo} alt="Instagram Logo"/>
                 
                 <Searchinputclass><i className="fas fa-search" /> <SearchInput /> </Searchinputclass>
-                
-                <i className="far fa-heart" />
-                <i className="far fa-compass" />
-                <i className="far fa-user"  />
+                    <i className="far fa-heart" />
+                    <i className="far fa-compass" />
+                    <i className="far fa-user"  />
             </Barcontainer>
         </Topbar>
     )

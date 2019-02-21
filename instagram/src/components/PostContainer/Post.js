@@ -32,6 +32,12 @@ const LikesFont = styled.div`
   color: #262626;
 `
 
+const MomentDiv = styled.div`
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+`
+
 const Post = props => {
   
     return (
@@ -47,7 +53,9 @@ const Post = props => {
           <Likes />
           <LikesFont>{props.post.likes} Likes</LikesFont>
           <CommentSection comments={props.post.comments} />
-          <div className="moment">{moment( props.post.timestamp, "'MMMM Do YYYY, h:mm:ss a").fromNow()}</div>
+          <MomentDiv>
+            {moment( props.post.timestamp, "'MMMM Do YYYY, h:mm:ss a").fromNow()}
+          </MomentDiv>
          
        </CommentsectionDiv>
       </IndPost>
