@@ -22,7 +22,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-       posts: [],
+       posts: [],       
+      
       
     };
   }
@@ -35,8 +36,8 @@ class App extends Component {
   }
 
 
-
-
+  
+ 
   render() {
     return (
       <Appcont>

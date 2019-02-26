@@ -31,7 +31,7 @@ class CommentSection extends React.Component {
       super(props);
       this.state = {
         comments: props.comments,
-        comment: ''
+        comment: '',
       };
     }
 
@@ -72,10 +72,14 @@ class CommentSection extends React.Component {
       });
     };
     
+  
+ 
 
     render() {
+      
       return (
         <>           
+                
                 {this.state.comments.map((comm ) => <Comments key={uuidv4()} comments={comm} />)}
                 <AddComment>
                   <form onSubmit={this.addNewComment} ref="someName" >
@@ -87,6 +91,7 @@ class CommentSection extends React.Component {
                       <i className="fas fa-ellipsis-h" />
                   </form>
                 </AddComment>  
+                
             </>  
         );
     }

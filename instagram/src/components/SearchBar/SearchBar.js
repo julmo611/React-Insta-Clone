@@ -82,7 +82,13 @@ const SearchBar = props => {
                 <i className="fab fa-instagram" />
                 <img src={instaLogo} alt="Instagram Logo"/>
                 
-                <Searchinputclass><i className="fas fa-search" /> <SearchInput /> </Searchinputclass>
+                <Searchinputclass><i className="fas fa-search" /> 
+                <SearchInput 
+                   updateSearch={props.updateSearch}
+                   value={props.value}
+                  
+                />
+                 </Searchinputclass>
                     <i className="far fa-heart" />
                     <i className="far fa-compass" />
                     <i className="far fa-user"  />

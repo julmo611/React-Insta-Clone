@@ -1,11 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
-
-
+import Likes from './Likes';
 import PostHeader from './PostHeader';
 import CommentSection from '../CommentSection/CommentSection';
-import Likes from '../CommentSection/Likes';
+
 
 
 // style
@@ -38,29 +37,47 @@ const MomentDiv = styled.div`
   margin-bottom: 5px;
 `
 
-const Post = props => {
+
+class Post extends React.Component  {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    };
+  }
+
+  likesUp = () => {
+    let likes = this.state.likes + 1;
+   this.setState({ likes });
+ };
+
+  render() {
   
     return (
       <IndPost>
         <PostHeader 
-          thumbnailUrl={props.post.thumbnailUrl}
-          username={props.post.username} />
+          thumbnailUrl={this.props.post.thumbnailUrl}
+          username={this.props.post.username} />
         <PostImg 
-              src={props.post.imageUrl} 
-              alt={props.post.username} />
+              src={this.props.post.imageUrl} 
+              alt={this.props.post.username} />
         
         <CommentsectionDiv>
-          <Likes />
-          <LikesFont>{props.post.likes} Likes</LikesFont>
-          <CommentSection comments={props.post.comments} />
+          <Likes 
+            likesUp={this.likesUp}
+            likes={this.state.likes}
+            />
+          <LikesFont>{this.state.likes} Likes</LikesFont>
+          <CommentSection comments={this.props.post.comments} />
           <MomentDiv>
-            {moment( props.post.timestamp, "'MMMM Do YYYY, h:mm:ss a").fromNow()}
+            {moment( this.props.post.timestamp, "'MMMM Do YYYY, h:mm:ss a").fromNow()}
           </MomentDiv>
          
        </CommentsectionDiv>
       </IndPost>
     );
-
+  }
 }
 
 

@@ -5,11 +5,13 @@ import apple from '../../img/apple.png';
 import google from '../../img/google.png';
 import microsoft from '../../img/microsoft.png';
 
+
+
 const BigBox = styled.div`
  
   width: 100%;
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 `
 const InstaLogo = styled.img`
   widht: 175px;
@@ -82,6 +84,7 @@ const LogFace = styled.p`
 `
 
 const SmallBox = styled.div`
+  letter-spacing: 3px;
   text-align: center;
   width: 350px;  
   padding: 20px 0 10px;
@@ -92,6 +95,9 @@ const SmallBox = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  & strong {
+    color: #2196f3; 
+  }
 `
 
 const Stores = styled.div`
@@ -116,11 +122,13 @@ class Login extends React.Component {
         super(props);
         this.state = {
             userName: "",
-            inputText: ""
-     
+            inputText: "",
+             
         };
       }
     
+
+      
     handleChanges = e => this.setState({ inputText: e.target.value });
     nameHandle = e => this.setState({userName: e.target.value});
 
@@ -133,6 +141,7 @@ class Login extends React.Component {
       window.location.reload();
     };
 
+   
 
 render() {
     return (
@@ -157,7 +166,7 @@ render() {
           <Button type="primary" onClick={this.signIn}>Log In</Button>
           <hr/>
           <ORLine>OR</ORLine>
-          <LogFace><i class="fab fa-facebook-square"></i> Log in With Facebook</LogFace>
+          <LogFace><i className="fab fa-facebook-square" /> Log in With Facebook</LogFace>
         </Loginform>
         <SmallBox>
           <p>Don't have an account? <strong>Sign up</strong></p>
