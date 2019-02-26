@@ -27,8 +27,10 @@ const ProfileHolder = styled.div`
 `
 const Maincontainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     position: relative;
-    width: 920px;
+    width: 100%;
+    max-width: 920px;
     margin: 0 auto;
 `
 

@@ -17,7 +17,8 @@ const Topbar =  styled.div `
     z-index: 9999;
   `
 const Barcontainer = styled.div`
-        width: 970px;
+        max-width: 970px;
+        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
